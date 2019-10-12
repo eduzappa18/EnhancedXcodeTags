@@ -102,12 +102,10 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	if (JSON.parse(GM_getValue("dark_mode", "{}")) === true) {
-		console.log("dark_mode =", "true", JSON.parse(GM_getValue("dark_mode", "{}")));
 		toggleSwitch(true);
 		dark.removeAttribute("disabled");
 		light.setAttribute("disabled", "disabled");
 	} else if (JSON.parse(GM_getValue("dark_mode", "{}")) === false) {
-		console.log("dark_mode =", "false", JSON.parse(GM_getValue("dark_mode", "{}")));
 		toggleSwitch(false);
 		light.removeAttribute("disabled");
 		dark.setAttribute("disabled", "disabled");
