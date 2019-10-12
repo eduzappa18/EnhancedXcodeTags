@@ -114,13 +114,13 @@ document.addEventListener('DOMContentLoaded', function() {
 	function darkSwitch() {
 		if (this.checked) {
 			toggleSwitch(true);
-			dark.disabled = false;
-			light.disabled = true;
+			dark.removeAttribute("disabled");
+			light.setAttribute("disabled", "disabled");
 			GM_setValue("dark_mode", JSON.stringify(true));
 		} else {
 			toggleSwitch(false);
-			light.disabled = false;
-			dark.disabled = true;
+			light.removeAttribute("disabled");
+			dark.setAttribute("disabled", "disabled");
 			GM_setValue("dark_mode", JSON.stringify(false));
 		}
 	}
