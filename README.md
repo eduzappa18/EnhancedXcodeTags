@@ -17,3 +17,6 @@ Firefox and Google Chrome
 
 1. Install [Tampermonkey](https://www.tampermonkey.net/) userscript manager
 2. Click **[HERE](https://eduzappa18.github.io/EnhancedXcodeTags/src/EnhancedXcodeTags.user.js)** to install EnhancedXcodeTags userscript
+
+### Preview  
+![EnhancedXcodeTags](https://eduzappa18.github.io/EnhancedXcodeTags/src/css/EnhancedXcodeTags.gif)
