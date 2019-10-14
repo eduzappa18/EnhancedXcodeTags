@@ -2,7 +2,7 @@
 // @name          xNULL EnhancedXcodeTags
 // @namespace     EnhancedXcodeTags
 // @description   Improved xcode tags for the xNULL forum
-// @version       0.1.0
+// @version       0.1.1
 // @author        Zappa (eduzappa18)
 // @license       MIT; https://github.com/eduzappa18/EnhancedXcodeTags/blob/master/LICENSE
 // @homepageURL   https://github.com/eduzappa18/EnhancedXcodeTags
@@ -151,7 +151,7 @@ function PrismHack() {
 			greedy: true
 		},
 		'moh-thread': {
-			pattern: /^([ \t]+)*[\w-]+(?=([ \t]+[\w\.-]+)*[:])/m,
+			pattern: /^([ \t]+)*(?!\b(default|case)\b)[\w-]+(?=([ \t]+[\w\.-]+)*[:])/m,
 			lookbehind: true
 		},
 		'keyword': /\b(break|case|catch|continue|default|else|end|for|goto|if|switch|throw|try|while)\b/,
