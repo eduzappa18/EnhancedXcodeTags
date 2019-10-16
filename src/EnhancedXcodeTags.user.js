@@ -80,23 +80,28 @@ if (GM_getValue("dark_mode") === undefined) {
 document.addEventListener('DOMContentLoaded', function() {
 	const blocks = document.querySelectorAll('pre.line-numbers');
 	for (const block of blocks) {
+		let wrapper = document.createElement("div");
+			wrapper.setAttribute("class", "xcode_container");
+
 		let div = document.createElement("div");
 			div.setAttribute("class", "input-container");
 			div.setAttribute("title", "Toggle Color Theme");
 
 		let input = document.createElement("input");
 			input.setAttribute("id", "darkTheme");
-			input.setAttribute("class", "setting");
+			input.setAttribute("class", "xcode_switch");
 			input.setAttribute("type", "checkbox");
 			input.addEventListener('change', darkSwitch, false);
 
 		let label = document.createElement("label");
-			label.setAttribute("class", "setting");
+			label.setAttribute("class", "xcode_switch");
 			label.setAttribute("for", "darkTheme");
 
+		block.parentNode.insertBefore(wrapper, block);
 		div.append(input);
 		div.append(label);
-		block.prepend(div);
+		wrapper.append(block);
+		wrapper.append(div);
 	}
 
 	if (JSON.parse(GM_getValue("dark_mode", "{}")) === true) {
@@ -124,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	function toggleSwitch(value) {
-		const inputs = document.querySelectorAll('input.setting');
+		const inputs = document.querySelectorAll('input.xcode_switch');
 		for (const input of inputs) {
 			input.checked = value;
 		}

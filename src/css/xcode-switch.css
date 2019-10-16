@@ -1,28 +1,43 @@
-.input-container {
+div.xcode_container {
 	position: relative;
-	float: right;
 }
 
-.setting {
+div.xcode_container > .input-container {
+	position: absolute;
+	top: 1.3em;
+	right: .6em;
+	transition: opacity 0.3s ease-in-out;
+	opacity: 0;
+}
+
+div.xcode_container:hover > .input-container {
+	opacity: 1;
+}
+
+div.xcode_container:focus-within > .input-container {
+	opacity: 1;
+}
+
+div.xcode_container > .input-container > .xcode_switch {
 	cursor: pointer;
 	display: block;
 	position: relative;
 	height: 14px;
 }
-.setting::selection {
+div.xcode_container > .input-container > .xcode_switch::selection {
 	background: transparent;
 }
 
-.input-container input[type=checkbox] + label:before {
+div.xcode_container > .input-container input[type=checkbox] + label:before {
 	box-shadow: none;
 }
 
-.input-container input[type=checkbox]:checked + label:before {
-	background: #7192a8; /*#27a6e5;*/
+div.xcode_container > .input-container input[type=checkbox]:checked + label:before {
+	background: #7192a8;
 }
 
-.input-container input[type=checkbox] + label:before {
-	background: #e9e9e9; /*#808080;*/
+div.xcode_container > .input-container input[type=checkbox] + label:before {
+	background: #e9e9e9;
 	border-radius: 100px;
 	box-shadow: 0 0 2px 0 #333 inset;
 	box-sizing: border-box;
@@ -39,11 +54,11 @@
 	transform: translateY(-50%);
 }
 
-.input-container input[type=checkbox]:not(:checked) + label:after {
+div.xcode_container > .input-container input[type=checkbox]:not(:checked) + label:after {
 	left: 8px;
 }
 
-.input-container input[type=checkbox] + label:after {
+div.xcode_container > .input-container input[type=checkbox] + label:after {
 	background: #fff;
 	border-radius: 90px;
 	box-shadow: 0 0 3px 0 #333;
@@ -62,11 +77,11 @@
 	margin-right: 6px;
 }
 
-.input-container input[type=checkbox] + label {
+div.xcode_container > .input-container input[type=checkbox] + label {
 	padding-left: 46px;
 }
 
-.input-container input[type=checkbox] {
+div.xcode_container > .input-container input[type=checkbox] {
 	display: none;
 	height: 0;
 	visibility: hidden;
