@@ -19,14 +19,12 @@
 
 'use strict';
 
-if (unsafeWindow.Prism.languages.moh) {
-	unsafeWindow.Prism.languages.moh = null;
-	unsafeWindow.Prism.languages.mohaa = null;
-	unsafeWindow.Prism.languages.scr = null;
-	PrismHack();
-} else {
-	console.log("PrismHack failed!");
+if (typeof unsafeWindow.Prism === "undefined") {
+	console.log("[xNULL EnhancedXcodeTags] No Prism object, returning");
+	return;
 }
+
+PrismHack();
 
 // Disable xNULL prism style
 const xnull_prism = document.querySelector('link[href*="forums/xcode/prism.css"]');
@@ -134,6 +132,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function PrismHack() {
+	unsafeWindow.Prism.languages.moh = null;
+	unsafeWindow.Prism.languages.mohaa = null;
+	unsafeWindow.Prism.languages.scr = null;
+
 	unsafeWindow.Prism.languages.moh = {
 		'comment': [
 			{
