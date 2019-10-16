@@ -5,12 +5,12 @@ pre[class*="language-"] {
 
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
-	background: #48473d;
+	background: hsl(55, 8%, 26%, 0.99);
 }
 
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
 code[class*="language-"]::selection, code[class*="language-"] ::selection {
-	background: #48473d;
+	background: hsl(55, 8%, 26%, 0.99);
 }
 
 :not(pre) > code[class*="language-"],
