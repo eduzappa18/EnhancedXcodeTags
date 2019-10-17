@@ -2,7 +2,7 @@
 // @name          xNULL EnhancedXcodeTags
 // @namespace     EnhancedXcodeTags
 // @description   Improved xcode tags for the xNULL forum
-// @version       0.1.2
+// @version       0.1.3
 // @author        Zappa (eduzappa18)
 // @license       MIT; https://github.com/eduzappa18/EnhancedXcodeTags/blob/master/LICENSE
 // @homepageURL   https://github.com/eduzappa18/EnhancedXcodeTags
