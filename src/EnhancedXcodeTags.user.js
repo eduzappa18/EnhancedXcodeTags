@@ -158,7 +158,7 @@ function PrismHack() {
 			greedy: true
 		},
 		'moh-thread': {
-			pattern: /^([ \t]+)*(?!\b(default|case)\b)[\w-]+(?=([ \t]+[\w\.-]+)*[:](?!:))/m,
+			pattern: /(^\s*)(?!\b(default|case)\b)[\w-]+(?=([ \t]+[\w\.-]+)*[:](?!:))/m,
 			lookbehind: true
 		},
 		'keyword': /\b(break|case|catch|continue|default|else|end|for|goto|if|switch|throw|try|while)\b/,
